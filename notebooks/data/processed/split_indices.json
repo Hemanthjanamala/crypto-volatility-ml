@@ -1,0 +1,5 @@
+{
+    "train_size": 6513,
+    "test_size": 1629,
+    "split_index": 6513
+}

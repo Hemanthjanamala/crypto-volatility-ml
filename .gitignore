@@ -1,8 +1,8 @@
-# OS
+# === OS files ===
 .DS_Store
 Thumbs.db
 
-# Python
+# === Python cache & virtual env ===
 __pycache__/
 *.py[cod]
 *.egg-info/
@@ -11,25 +11,27 @@ env/
 venv/
 .ipynb_checkpoints/
 
-# Jupyter
+# === Jupyter ===
 .notebooks/
 **/.ipynb_checkpoints/
 
-# VS Code
+# === VS Code ===
 .vscode/*
 
-# Data & models
+# === Data & models ===
 data/interim/
 data/processed/
 data/raw/
 models/
 reports/figures/
 
-# Logs
+# EXCEPTION: Keep src/data/
+!src/data/
+
+# === Logs ===
 logs/
 *.log
 
-# Secrets (never commit)
+# === Secrets (never commit) ===
 *.env
 .env
-data/
