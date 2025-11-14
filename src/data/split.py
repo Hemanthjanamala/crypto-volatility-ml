@@ -23,8 +23,8 @@ def time_series_split(df: pd.DataFrame, test_size=0.2, random_state=42):
         "split_index": split_index
     }
     
-    Path("data/processed/").mkdir(parents=True, exist_ok=True)
-    with open("data/processed/split_indices.json", "w") as f:
+    Path("..data/processed/").mkdir(parents=True, exist_ok=True)
+    with open("..data/processed/split_indices.json", "w") as f:
         json.dump(split_meta, f, indent=4)
     
     return train_df, test_df
