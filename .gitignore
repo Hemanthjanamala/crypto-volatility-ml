@@ -35,3 +35,16 @@ logs/
 # === Secrets (never commit) ===
 *.env
 .env
+
+# Virtual environments
+venv/
+venv_test/
+.env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db

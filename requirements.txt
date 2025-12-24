@@ -1,0 +1,15 @@
+numpy
+pandas
+matplotlib
+scikit-learn
+statsmodels
+pmdarima
+prophet
+cmdstanpy
+fastapi
+uvicorn[standard]
+pydantic
+joblib
+python-dotenv
+tensorflow
+shap
