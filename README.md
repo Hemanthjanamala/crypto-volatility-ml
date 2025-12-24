@@ -74,26 +74,19 @@ Feature engineering code: src/data/features.py
 
 ## Project Structure
 
-`	ext
+```
 crypto-volatility-ml/
-│
 ├── data/
 │   ├── raw/                          # Kaggle CSVs or extracted files
 │   │   └── crypto_all_combined.csv   # combined output
 │   └── processed/
 │       ├── crypto_features.csv       # final feature dataset used by models
 │       ├── predictions_*.csv         # saved model predictions (backtest/future)
-│       └── split_indices.json        # optional: split metadata (if used)
-│
+│       └── split_indices.json        
 ├── notebooks/
-│   ├── 00_eda.ipynb                  # EDA + finance-specific plots
-│   ├── 01_modeling.ipynb             # model training/experiments
-│   └── 02_results.ipynb              # comparison dashboard + plots
-│
+│   └── 00_eda.ipynb                  # EDA + finance-specific plots
 ├── reports/
-│   ├── figures/                      # ALL saved plots go here
-│   └── report.md                     # final write-up (export to PDF)
-│
+│   └── figures/                      # ALL saved plots go here                         
 ├── src/
 │   ├── api/
 │   │   ├── main.py                   # FastAPI app entry
@@ -102,19 +95,19 @@ crypto-volatility-ml/
 │   │       ├── prophet_router.py
 │   │       ├── lstm_router.py
 │   │       └── meta_router.py        # best model / best coin endpoints
-│   │
 │   ├── data/
-│   │   ├── clean.py                  # cleaning + scaling (train-only where needed)
+│   │   ├── clean.py                  # cleaning + scaling
 │   │   ├── features.py               # feature engineering
-│   │   └── split.py                  # time-based split helpers (optional)
-│   │
-│   └── models/
-│       ├── arima_forecast.py
-│       ├── prophet_forecast.py
-│       └── lstm_forecast.py   
+│   │   └── split.py                  # time-based split helpers 
+│   ├── models/
+│   │   ├── arima_forecast.py
+│   │   ├── prophet_forecast.py
+│   │   └── lstm_forecast.py
+│   └── utils/
+│       └── io.py                    
 ├── requirements.txt
 └── README.md
-``
+```
 
 ---
 
@@ -139,13 +132,12 @@ pip install -r requirements.txt
 ## Build the Processed Dataset
 
 1. Put your Kaggle CSV files inside:
-   data/raw/
+   data/raw/ [Dataset](https://www.kaggle.com/datasets/sudalairajkumar/cryptocurrencypricehistory)
 
-2. Run your combine + feature pipeline (whichever script/notebook you use):
+2. Run your combine + feature pipeline (script/notebook you use):
 
-* Option A: Run notebook 
-otebooks/00_eda.ipynb (recommended)
-* Option B: Run your pipeline script (if you created one)
+* Run notebook 
+notebooks/00_eda.ipynb (recommended)
 
 Expected output:
 
